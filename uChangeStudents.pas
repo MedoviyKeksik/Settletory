@@ -18,15 +18,18 @@ type
     actAdd: TAction;
     actEdit: TAction;
     actDelete: TAction;
+    Label1: TLabel;
+    pnlName: TPanel;
+    pnlLeft: TPanel;
     procedure actAddExecute(Sender: TObject);
     procedure actDeleteExecute(Sender: TObject);
     procedure actEditExecute(Sender: TObject);
     procedure alChangeStudentsUpdate(Action: TBasicAction;
       var Handled: Boolean);
   private
-    procedure Update;
   public
     Room: TRoom;
+    procedure Update;
   end;
 
 var

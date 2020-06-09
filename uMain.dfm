@@ -31,21 +31,24 @@ object frmMain: TfrmMain
           -2)
       end
       item
+        AutoSize = True
         Caption = 'Name'
         MinWidth = 50
-        Width = -2
         WidthType = (
           -2)
       end
       item
+        AutoSize = True
         Caption = 'Addres'
         MinWidth = 50
-        Width = -2
         WidthType = (
           -2)
       end>
+    ColumnClick = False
     GridLines = True
     ReadOnly = True
+    RowSelect = True
+    SortType = stText
     TabOrder = 0
     ViewStyle = vsReport
   end
@@ -145,6 +148,8 @@ object frmMain: TfrmMain
     object FileOpen: TFileOpen
       Category = 'File'
       Caption = '&Open...'
+      Dialog.DefaultExt = '*.sf'
+      Dialog.Filter = 'Settletory file|*.sf'
       Hint = 'Open|Opens an existing file'
       ImageIndex = 0
       ShortCut = 16463
@@ -153,6 +158,8 @@ object frmMain: TfrmMain
     object FileSaveAs: TFileSaveAs
       Category = 'File'
       Caption = 'Save &As...'
+      Dialog.DefaultExt = '*.sf'
+      Dialog.Filter = 'Settletory file|*.sf'
       Hint = 'Save As|Saves the active file with a new name'
       ImageIndex = 1
       ShortCut = 16467

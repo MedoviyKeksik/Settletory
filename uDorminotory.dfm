@@ -3,9 +3,9 @@ object frmDorminotory: TfrmDorminotory
   Top = 0
   BorderIcons = [biSystemMenu]
   BorderStyle = bsDialog
-  Caption = 'Dorminotary'
-  ClientHeight = 169
-  ClientWidth = 242
+  Caption = 'Dorminotory'
+  ClientHeight = 168
+  ClientWidth = 234
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -13,6 +13,7 @@ object frmDorminotory: TfrmDorminotory
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poOwnerFormCenter
   PixelsPerInch = 96
   TextHeight = 13
   object edtName: TLabeledEdit

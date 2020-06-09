@@ -20,6 +20,9 @@ type
     actEdit: TAction;
     actChange: TAction;
     actDelete: TAction;
+    pnlLeft: TPanel;
+    pnlLabel: TPanel;
+    lblName: TLabel;
     procedure actAddExecute(Sender: TObject);
     procedure actEditExecute(Sender: TObject);
     procedure aiDorminotoryUpdate(Action: TBasicAction; var Handled: Boolean);
@@ -27,9 +30,9 @@ type
     procedure actChangeExecute(Sender: TObject);
   private
     { Private declarations }
-    procedure Update;
   public
     Dorminotory: TDorminotory;
+    procedure Update;
     { Public declarations }
   end;
 
@@ -60,6 +63,7 @@ end;
 procedure TfrmChangeDorminotory.actChangeExecute(Sender: TObject);
 begin
   frmChangeFloor.Floor := Dorminotory.Floors.Data[lvDorminotory.ItemIndex];
+  frmChangeFloor.Update;
   frmChangeFloor.ShowModal;
 end;
 

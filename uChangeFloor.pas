@@ -20,15 +20,18 @@ type
     actEdit: TAction;
     actChange: TAction;
     actDelete: TAction;
+    pnlLeft: TPanel;
+    pnlLabel: TPanel;
+    Label1: TLabel;
     procedure actAddExecute(Sender: TObject);
     procedure actEditExecute(Sender: TObject);
     procedure actDeleteExecute(Sender: TObject);
     procedure aiChangeFloorUpdate(Action: TBasicAction; var Handled: Boolean);
     procedure actChangeExecute(Sender: TObject);
   private
-    procedure Update;
   public
     Floor: TFloor;
+    procedure Update;
   end;
 
 var
@@ -60,6 +63,7 @@ end;
 procedure TfrmChangeFloor.actChangeExecute(Sender: TObject);
 begin
   frmChangeStudents.Room := Floor.Rooms.Data[lvFloor.ItemIndex];
+  frmChangeStudents.Update;
   frmChangeStudents.ShowModal;
   Update;
 end;
@@ -104,10 +108,10 @@ var
   TmpStr: string;
 begin
   lvFloor.Items.Clear;
-  TmpStr := '';
   for I := Low(Floor.Rooms.Data) to High(Floor.Rooms.Data) do
   begin
     Item := lvFloor.Items.Add;
+    TmpStr := '';
     with Floor.Rooms.Data[I] do
     begin
       Item.Caption := IntToStr(Number);
