@@ -48,10 +48,6 @@ object frmMain: TfrmMain
     ReadOnly = True
     TabOrder = 0
     ViewStyle = vsReport
-    ExplicitLeft = 0
-    ExplicitTop = 0
-    ExplicitWidth = 714
-    ExplicitHeight = 556
   end
   object pnlButtons: TPanel
     Left = 714
@@ -79,9 +75,6 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       TabOrder = 0
-      ExplicitLeft = 32
-      ExplicitTop = 40
-      ExplicitWidth = 200
     end
     object btnEdit: TButton
       AlignWithMargins = True
@@ -102,9 +95,6 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       TabOrder = 1
-      ExplicitLeft = 32
-      ExplicitTop = 80
-      ExplicitWidth = 200
     end
     object btnChange: TButton
       AlignWithMargins = True
@@ -125,9 +115,6 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       TabOrder = 2
-      ExplicitLeft = 40
-      ExplicitTop = 168
-      ExplicitWidth = 200
     end
     object btnDelete: TButton
       AlignWithMargins = True
@@ -148,13 +135,11 @@ object frmMain: TfrmMain
       Font.Style = []
       ParentFont = False
       TabOrder = 3
-      ExplicitLeft = 40
-      ExplicitTop = 287
-      ExplicitWidth = 200
     end
   end
   object alMain: TActionList
     Images = ilMain
+    OnUpdate = alMainUpdate
     Left = 536
     Top = 448
     object FileOpen: TFileOpen
@@ -163,6 +148,7 @@ object frmMain: TfrmMain
       Hint = 'Open|Opens an existing file'
       ImageIndex = 0
       ShortCut = 16463
+      OnAccept = FileOpenAccept
     end
     object FileSaveAs: TFileSaveAs
       Category = 'File'
@@ -170,6 +156,7 @@ object frmMain: TfrmMain
       Hint = 'Save As|Saves the active file with a new name'
       ImageIndex = 1
       ShortCut = 16467
+      OnAccept = FileSaveAsAccept
     end
     object FileExit: TFileExit
       Category = 'File'
@@ -184,20 +171,23 @@ object frmMain: TfrmMain
     end
     object TableEditDorminotory: TAction
       Caption = 'Edit dorminotory'
+      OnExecute = TableEditDorminotoryExecute
     end
     object TableDeleteDorminotory: TAction
       Caption = 'Delete dorminotory'
       ShortCut = 46
+      OnExecute = TableDeleteDorminotoryExecute
     end
     object TableChangeDorminotory: TAction
       Caption = 'Change dorminotory'
+      OnExecute = TableChangeDorminotoryExecute
     end
   end
   object ilMain: TImageList
     Left = 592
     Top = 448
     Bitmap = {
-      494C010103000800040010001000FFFFFFFFFF00FFFFFFFFFFFFFFFF424D3600
+      494C010103000800040010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000
@@ -333,7 +323,8 @@ object frmMain: TfrmMain
       001FF00300000000000FE003E00700000007E003E00700000003E003E0070000
       0001E003E007000000002003E0070000001FE002E0070000001FE003E0070000
       001FE003E00700008FF1E003FFFF0000FFF9E003F81F0000FF75FFFFF81F0000
-      FF8FBF7DF81F0000FFFF7F7EFFFF0000}
+      FF8FBF7DF81F0000FFFF7F7EFFFF000000000000000000000000000000000000
+      000000000000}
   end
   object mmMain: TMainMenu
     Images = ilMain

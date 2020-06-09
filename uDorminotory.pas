@@ -7,7 +7,7 @@ uses
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls;
 
 type
-  TfrmDorminotary = class(TForm)
+  TfrmDorminotory = class(TForm)
     edtName: TLabeledEdit;
     edtAddress: TLabeledEdit;
     btnOk: TButton;
@@ -23,7 +23,7 @@ type
   end;
 
 var
-  frmDorminotary: TfrmDorminotary;
+  frmDorminotory: TfrmDorminotory;
 
 implementation
 
@@ -31,17 +31,17 @@ implementation
 
 { TfrmDorminotary }
 
-function TfrmDorminotary.GetAddress: String;
+function TfrmDorminotory.GetAddress: String;
 begin
   Result := edtAddress.Text;
 end;
 
-function TfrmDorminotary.GetName: String;
+function TfrmDorminotory.GetName: String;
 begin
   Result := edtName.Text;
 end;
 
-function TfrmDorminotary.ShowVal(const Name, Address: String): Integer;
+function TfrmDorminotory.ShowVal(const Name, Address: String): Integer;
 begin
   edtName.Text := Name;
   edtAddress.Text := Address;

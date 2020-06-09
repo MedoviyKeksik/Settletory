@@ -104,7 +104,31 @@
         </DCCReference>
         <DCCReference Include="uStructures.pas"/>
         <DCCReference Include="uDorminotory.pas">
-            <Form>frmDorminotary</Form>
+            <Form>frmDorminotory</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uChangeDorminotory.pas">
+            <Form>frmChangeDorminotory</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uFloor.pas">
+            <Form>frmFloor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uChangeFloor.pas">
+            <Form>frmChangeFloor</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uRoom.pas">
+            <Form>frmRoom</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="uChangeStudents.pas">
+            <Form>frmChangeStudents</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Student.pas">
+            <Form>frmStudent</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">

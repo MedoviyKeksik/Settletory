@@ -33,7 +33,7 @@ procedure TDynArray<T>.Erase(const Id: Integer);
 var
   I: Integer;
 begin
-  for I := Id to Length(Data) - 1 do
+  for I := Id to Length(Data) - 2 do
     Data[I] := Data[I + 1];
   SetLength(Data, Length(Data) - 1);
 end;
